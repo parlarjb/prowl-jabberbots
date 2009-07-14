@@ -12,4 +12,4 @@ This bot also requires a text file, 'email.txt'. First line is your gmail addres
 
 All of these require the 'prowlpy' library. I have my own version of this hosted at http://github.com/parlarjb/prowlpy/tree/master, which is based off o http://github.com/jacobb/prowlpy/tree/master
 
-There are some standard third party libraries you'll need. xmpppy (http://xmpppy.sourceforge.net/) and httplib2 (http://code.google.com/p/httplib2/)
+There are some standard third party libraries you'll need. [xmpppy](http://xmpppy.sourceforge.net/) and httplib2 (http://code.google.com/p/httplib2/)
