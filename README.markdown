@@ -13,3 +13,6 @@ This bot also requires a text file, 'email.txt'. First line is your gmail addres
 All of these require the 'prowlpy' library. I have my own version of this hosted at [http://github.com/parlarjb/prowlpy/tree/master](http://github.com/parlarjb/prowlpy/tree/master), which is based off of [http://github.com/jacobb/prowlpy/tree/master](http://github.com/jacobb/prowlpy/tree/master)
 
 There are some standard third party libraries you'll need. [xmpppy](http://xmpppy.sourceforge.net/) and [httplib2](http://code.google.com/p/httplib2/) and [PyDNS](http://pydns.sourceforge.net/) Those are all installable with [pip](http://pypi.python.org/pypi/pip) 
+
+
+jabberbot.py is a SLIGHTLY modified version of the source available [here](http://thpinfo.com/2007/python-jabberbot/)
