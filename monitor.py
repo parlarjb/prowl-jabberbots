@@ -28,7 +28,7 @@ class GtalkMonitorJabberBot(JabberBot):
         self.users = {}
         for name, apikey in watch_list:
             self.users[name] = User(name, apikey)
-            self.users[name].email_notify_running = True
+            self.users[name].email_notify_running = False
     
     def bot_time( self, mess, args):
         """Displays current server time"""
@@ -91,6 +91,8 @@ class GtalkMonitorJabberBot(JabberBot):
                     self.users[name].prowl.post("Disconnects", "emailnotify.py", "Your emailnotify.py went offline at %s" % str(datetime.datetime.now())) 
                 except Exception, msg:
                     print msg
+            elif email_notify_running:
+                self.users[name].email_notify_running = True
 
 
 
