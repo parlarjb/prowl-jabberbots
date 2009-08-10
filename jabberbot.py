@@ -75,12 +75,14 @@ __version__ = '0.6'
 class JabberBot(object):
     command_prefix = 'bot_'
 
-    def __init__( self, jid, password, res = None):
+    def __init__( self, jid, password, res = None, server = None, port = None):
         """Initializes the jabber bot and sets up commands."""
         self.jid = xmpp.JID( jid)
         self.password = password
         self.res = (res or self.__class__.__name__)
         self.conn = None
+        self.server = server
+        self.port = port
         self.__finished = False
 
         self.commands = { 'help': self.help_callback, }
@@ -96,7 +98,7 @@ class JabberBot(object):
         if not self.conn:
             conn = xmpp.Client( self.jid.getDomain(), debug = [])
             
-            if not conn.connect():
+            if not conn.connect([self.server, self.port]):
                 self.log( 'unable to connect to server.')
                 return None
             
