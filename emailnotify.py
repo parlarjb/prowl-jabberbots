@@ -152,7 +152,6 @@ class EmailNotifyJabberBot(JabberBot):
                     unread_senders = []
                     for sender in gmessage.getTag('senders').getTags('sender'):
                         if sender.getAttr('unread') != '1':
-                            print "Unuseable sender", sender.getAttr('name')
                             continue
                         if sender.getAttr('name'):
                             unread_senders.append(sender.getAttr('name') + ' < ' +\
