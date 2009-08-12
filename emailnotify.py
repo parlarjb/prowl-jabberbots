@@ -39,7 +39,7 @@ class EmailNotifyJabberBot(JabberBot):
         self.got_first_response = False
         self.last_id = self._id
         self.last_query_time = time.time()
-        super(EmailNotifyJabberBot, self).__init__(username, password)
+        super(EmailNotifyJabberBot, self).__init__(username, password, server = "talk.google.com", port = 5222)
         
         self.user = User(username, apikey)
 
