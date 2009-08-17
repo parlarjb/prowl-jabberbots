@@ -173,7 +173,7 @@ class EmailNotifyJabberBot(JabberBot):
                     try:
                         #if snippet[-1] == u'\u2026':
                         #    snippet = snippet[:-1] + u"..."
-                        self.user.prowl.post(unread_senders[0], subject, snippet)
+                        self.user.prowl.post(u"Email", u"[" + unread_senders[0] + u"]" + subject, snippet)
                         print "Posted", unread_senders, subject, self.gmail_last_time, self.gmail_last_tid
                     except Exception, msg:
                         print "Got exception"
