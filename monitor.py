@@ -23,7 +23,7 @@ from password import get_username_password_key
 class GtalkMonitorJabberBot(JabberBot):
 
     def __init__(self, username, password, watch_list):
-        super(GtalkMonitorJabberBot, self).__init__(username, password)
+        super(GtalkMonitorJabberBot, self).__init__(username, password,server = "talk.google.com", port = 5222 )
 
         self.users = {}
         for name, apikey in watch_list:
